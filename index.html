@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VanillaJS Todo App</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+
+  <body class="darkmode">
+    <div id="app">
+      <!-- Options -->
+      <div class="options">
+        <button id="color-mode">
+          Light Mode
+        </button>
+        <button id="clear-list">Clear list</button>
+      </div>
+      <!-- !Options -->
+      <h1>Todo List</h1>
+      <!-- Todo form -->
+      <form class="form" id="add-todo-form">
+        <input type="text" id="add-todo-input" class="input" />
+        <button class="add-btn">Add task</button>
+      </form>
+      <!-- !Todo form -->
+      <!-- Todo list -->
+      <div class="todos" id="todo-list"></div>
+      <!-- !Todo list -->
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>

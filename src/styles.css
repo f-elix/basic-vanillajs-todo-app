@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+}
+html {
+  font-size: 14px;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+#app {
+  min-height: 100vh;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  padding: 1.5rem;
+  position: relative;
+  transition: color 0.4s ease, background-color 0.4s ease;
+}
+.darkmode {
+  background-color: #222222;
+  color: #fff;
+}
+.todos {
+  width: 100%;
+}
+input,
+textarea {
+  width: 80%;
+  margin: 0 0.25rem;
+  padding: 0.5rem;
+  border: 2px solid grey;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  transition: border-color 0.2s ease;
+}
+input:focus,
+textarea:focus {
+  border-color: #2ecc71;
+}
+button {
+  color: white;
+  background-color: #2ecc71;
+  border: none;
+  margin: 0.75rem 0.25rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+button:hover {
+  background-color: #1abc9c;
+}
+button:active {
+  box-shadow: inset 1px 1px 3px black;
+  outline: none;
+}
+.options {
+  position: absolute;
+  right: 10%;
+  top: 0%;
+}
+.options button {
+  font-size: 0.75rem;
+}
+
+.form .input,
+.form .add-btn {
+  width: 100%;
+}
+
+.todo {
+  width: 100%;
+  padding: 0.25rem;
+  margin: 0.75rem auto;
+  display: flex;
+  border: 3px solid grey;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.todo__text {
+  flex-basis: 100%;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+}
+.todo p {
+  margin: 0.25rem;
+  text-align: left;
+}
+.todo textarea {
+  width: 100%;
+  font-size: inherit;
+}
+.todo button {
+  align-self: flex-start;
+  margin: 0.75rem 0.25rem;
+}
+.done {
+  text-decoration: line-through;
+}
+button.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+/* Vue transition */
+.edit-enter,
+.edit-leave-to {
+  opacity: 0;
+  transform: translateY(-6rem);
+}
+.edit-enter-active,
+.edit-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+@media screen and (min-width: 824px) {
+  .form .input {
+    max-width: 45rem;
+  }
+  .form .add-btn {
+    width: auto;
+  }
+  .todo {
+    max-width: 52.5rem;
+    justify-content: space-between;
+  }
+  .todo__text {
+    flex-basis: 60%;
+  }
+  .todo__buttons {
+    flex-basis: 40%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
